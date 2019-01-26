@@ -1,0 +1,34 @@
+<!-- This template is for Twitter results. Things that should be included on this page (as far as we have discussed) include (from the top, down) a search bar that (for new searchs and to potentially show the current search), a set of tabs to switch between results pages, and search results. -->
+
+<!-- New comments about the page as a whole, including questions, concerns, goals, etc. should be listed above this comment. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- This is a tag Atom inserts by default (when autocomplete is used that is) but it is important because it improves cross-compatibility in some cases. -->
+    <meta charset="utf-8">
+    <title>Twitter Results</title>
+  </head>
+  <body>
+    <!-- This is set up for a basic search bar and button. Eventually this needs variables and attributes modified to whatever the setup is. -->
+    <form class="" action="/twitter" method="get">
+      <!-- This is currently set up with an input tag, do we want to use textarea instead? Also, attributes and variables need to be updated appropriately. -->
+      <input type="text" autofocus="True" name="search_input" value={{search_term}}>
+      <!-- Just the submit button. -->
+      <input type="submit" name="submit" value="Search">
+    <br>
+    <!-- Temporary links instead of tabs placed here. To be fixed in the future. -->
+    <a href="/reddit">Reddit Results</a>
+    <!-- <a href="/facebook">Facebook Results</a> -->
+    <a href="/giphy">Giphy Results</a>
+    <a href="/youtube">YouTube Results</a>
+    <br>
+    <!-- Search results should be displayed below here. -->
+    <a class="twitter-timeline"
+       href='https://twitter.com/hashtag/trump'
+       data-widget-id="758370933228736512"
+       data-tweet-limit='20'>#{{search_term}} Tweets</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    </script>
+  </body>
+</html>
